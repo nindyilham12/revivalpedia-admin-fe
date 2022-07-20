@@ -8,6 +8,10 @@ export interface IUserDTO {
   status?: string;
   uid: string;
   username: string;
+  password: string;
+  oldPassword: string;
+  newPassword: string;
+  confirmNewPassword: string;
 }
 
 export interface IUser {
@@ -23,17 +27,6 @@ export interface IUser {
   newPassword: string;
   confirmNewPassword: string;
 }
-
-export type ProfileFormField = {
-  email: string;
-  name: string;
-  profilePhotoUrl?: string;
-  username: string;
-  password: string;
-  oldPassword: string;
-  newPassword: string;
-  confirmNewPassword: string;
-};
 
 export type ProfileErrorState = {
   name: string | null;

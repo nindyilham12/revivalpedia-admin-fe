@@ -25,6 +25,10 @@ export class UserDTO implements IDataTransferObject<IUserDTO, IUser> {
       status: userDO.status,
       uid: userDO.uid,
       username: userDO.username,
+      password: userDO.password,
+      oldPassword: userDO.oldPassword,
+      newPassword: userDO.newPassword,
+      confirmNewPassword: userDO.confirmNewPassword,
     };
 
     return new UserDTO(userDTO);

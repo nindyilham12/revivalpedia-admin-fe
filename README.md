@@ -4,18 +4,17 @@ RevivalPedia admin app
 
 ## Table of Content
 
-- [Demo with vercel](#Demo-with-vercel)
 - [Prerequisite](#Prerequisite)
 - [Getting started](#Getting-started)
 - [Build to production](#Build-to-production)
-
-## Demo with vercel
 
 ## Prerequisite
 
 - NodeJS v16.13.0
 - NPM v8.1.0
+- NextJS
 - Typescript
+- Chakra UI
 
 ## Getting started
 

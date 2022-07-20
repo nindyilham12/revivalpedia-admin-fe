@@ -26,7 +26,7 @@ import {
 import Head from 'next/head';
 import { PasswordInput } from '@/components';
 import { useRef, useState } from 'react';
-import { ProfileErrorState, ProfileFormField } from '@/typings';
+import { IUser, ProfileErrorState } from '@/typings';
 import Joi from 'joi';
 import {
   updateEmail,
@@ -48,7 +48,7 @@ const Profile = () => {
   const { user, signOut } = useAuth();
 
   //entity field user data
-  const userData = (): ProfileFormField => {
+  const userData = (): IUser => {
     return {
       name: user?.name ?? '',
       username: user?.username ?? '',
@@ -58,6 +58,8 @@ const Profile = () => {
       oldPassword: '',
       newPassword: '',
       confirmNewPassword: '',
+      role: 'admin' || 'manager',
+      uid: '',
     };
   };
 
@@ -106,7 +108,7 @@ const Profile = () => {
   const [updateStatus, setUpdateStatus] = useState<{ success: boolean }>();
 
   //state
-  const [formState, setFormState] = useState<ProfileFormField>(userData);
+  const [formState, setFormState] = useState<IUser>(userData);
   const [errors, setErrors] = useState<ProfileErrorState>(errorState);
 
   //image
@@ -187,7 +189,7 @@ const Profile = () => {
     } else return;
 
     if (updateSuccess) {
-      const updatedUser: ProfileFormField = { ...user! };
+      const updatedUser: IUser = { ...user! };
       updatedUser.name = formState.name!;
       updatedUser.username = formState.username!;
       if (type === 'photo') {
@@ -220,7 +222,7 @@ const Profile = () => {
     updateSuccess = successPassword ?? false;
 
     if (updateSuccess) {
-      const updatedUser: ProfileFormField = { ...user! };
+      const updatedUser: IUser = { ...user! };
       updatedUser.newPassword = formState.newPassword!;
       setFormState(updatedUser);
     }
@@ -256,7 +258,7 @@ const Profile = () => {
     }
 
     if (updateSuccess) {
-      const updatedUser: ProfileFormField = { ...user! };
+      const updatedUser: IUser = { ...user! };
       updatedUser.email = formState.email!;
       setFormState(updatedUser);
     }
