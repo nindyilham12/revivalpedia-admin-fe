@@ -25,6 +25,10 @@ export class UserDO implements IDomainObject<IUser, IUserDTO> {
       status: userDTO.status,
       uid: userDTO.uid,
       username: userDTO.username,
+      password: userDTO.password,
+      oldPassword: userDTO.oldPassword,
+      newPassword: userDTO.newPassword,
+      confirmNewPassword: userDTO.confirmNewPassword,
     };
 
     return new UserDO(user);
