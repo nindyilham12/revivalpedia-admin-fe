@@ -15,7 +15,8 @@ RevivalPedia admin app
 
 - NodeJS v16.13.0
 - NPM v8.1.0
-- Typescript
+- NextJS with Typescript
+- Chakra UI
 
 ## Getting started
 
