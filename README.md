@@ -12,8 +12,12 @@ RevivalPedia admin app
 
 - NodeJS v16.13.0
 - NPM v8.1.0
+<<<<<<< HEAD
 - NextJS
 - Typescript
+=======
+- NextJS with Typescript
+>>>>>>> 4c43c1e234a4c3d9ada8aaa539b0121d4c96e53b
 - Chakra UI
 
 ## Getting started
