@@ -1,0 +1,14 @@
+.dockerignore
+.next
+.vscode
+.husky
+.eslintcache
+.prettierrc
+.commitlintrc
+.eslintrc
+.lintstagedrc
+.env.local-example
+Dockerfile
+node_modules
+npm-debug.log
+README.md
