@@ -4,9 +4,14 @@ RevivalPedia admin app
 
 ## Table of Content
 
+- [Demo vercel](#Demo-vercel)
 - [Prerequisite](#Prerequisite)
 - [Getting started](#Getting-started)
 - [Build to production](#Build-to-production)
+
+## Demo Vercel
+
+- https://revivalpedia-admin-fe.vercel.app
 
 ## Prerequisite
 
